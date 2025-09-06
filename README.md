@@ -1,75 +1,58 @@
-# 📊 HR Analytics – Employee Attrition (SQL + Power BI)
+HR Analytics Dashboard
+📌 Overview
 
-This project is about analyzing **employee attrition** (why employees leave a company).  
-I used **SQL** to clean and prepare the dataset, and then built dashboards in **Power BI**.
+This project is an HR Analytics Dashboard built using Power BI. The main goal is to study employee attrition and provide insights that help HR teams take better decisions.
 
----
+The dataset was first cleaned using SQL (removing duplicates, handling null values, and standardizing columns) and then imported into Power BI for visualization.
 
-## 📂 Contents
-- `Dataset/original/` – raw dataset from Kaggle  
-- `Dataset/cleaned/hr_data_cleaned.csv` – cleaned dataset (ready for Power BI)  
-- `SQL/hr_cleaning.sql` – SQL queries for cleaning and creating new columns  
-- `PowerBI/` – Power BI `.pbix` file  
-- `Images/` – screenshots of dashboards  
+🎯 Objectives
 
----
+Show important HR KPIs (Attrition Rate, Average Age, Income, Total Employees).
 
-## 🗂 Dataset
-- **Source:** IBM HR Analytics Employee Attrition & Performance  
-  👉 https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset  
+Analyze attrition patterns by department, job role, gender, and marital status.
 
-I first cleaned it using SQL and then used the cleaned file for dashboards.
+Understand the effect of overtime and job satisfaction on attrition.
 
----
+Provide time-based filtering with a timeline slicer.
 
-## ⚙️ Tools Used
-- **SQL** – data cleaning and transformations  
-- **Power BI** – dashboard building and visualization  
+📊 Dashboard Highlights
 
----
+KPI Cards → Total Employees, Employees Left, Attrition Rate, Avg Income, Avg Age.
 
-## 🧹 SQL Cleaning (main steps)
-- Removed rows with missing values (like EmployeeNumber, Age, Department)  
-- Standardized Gender (Male/Female)  
-- Created new column `Attrition_Flag` (1 = Yes, 0 = No)  
-- Created `YearsGroup` based on `YearsAtCompany`  
-- Rounded Monthly Income for easier visuals  
+Charts → Attrition by Department, Gender, Job Role, Marital Status, Overtime, Satisfaction.
 
----
+Best vs Worst Insights → Departments/roles with highest vs lowest attrition.
 
-## 📈 Power BI Dashboard Pages
-**Page 1 – Executive Overview**  
-- KPIs: Total Employees, Attrition Rate, Avg Income, Avg Age  
-- Attrition by Gender, Department, Years at Company  
+Timeline Slicer → Year/quarter level filtering.
 
-**Page 2 – Attrition Drivers**  
-- Attrition by Job Role, Education Field  
-- Scatter: Income vs Years at Company (colored by Attrition)  
+🛠 Tools Used
 
-**Page 3 – Satisfaction & Overtime**  
-- Attrition by JobSatisfaction  
-- Attrition by Overtime  
-- Attrition by Marital Status  
+SQL → For cleaning and preparing the dataset.
 
----
+Power BI → For visualization and dashboard creation.
 
-## 🖼 Dashboard Screenshots
-![Dashboard - Overview](Images/dashboard1.png)  
-![Dashboard - Drivers](Images/dashboard2.png)  
-![Dashboard - Satisfaction](Images/dashboard3.png)  
+Excel/CSV → Dataset storage.
 
----
+✅ Key Insights
 
-## 🚀 How to Run
-1. Download dataset from Kaggle and put it in `Dataset/original/`.  
-2. Run SQL queries (`SQL/hr_cleaning.sql`) to clean the data.  
-3. Export as `hr_data_cleaned.csv`.  
-4. Open the cleaned data in Power BI and recreate dashboards.  
-5. (Optional) Save your `.pbix` in the PowerBI folder and export screenshots.  
+Sales and R&D face the highest attrition.
 
----
+Managers and HR roles are more stable.
 
-## 🎯 Learning Outcomes
-- Practiced **SQL cleaning and transformations**  
-- Learned how to prepare data for BI tools  
-- Built a **Power BI dashboard** to analyze real HR data  
+Single employees leave more often than married ones.
+
+Overtime workers show higher attrition.
+
+Low job satisfaction directly increases attrition.
+
+🚀 How to Run
+
+Run the SQL script to clean the raw HR dataset.
+
+Export the cleaned data to CSV/Excel.
+
+Open the Power BI file (HR_Analytics_Dashboard.pbix).
+
+Connect it to the cleaned dataset.
+
+Explore the dashboard and apply filters.
